@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="templatemo-chain-summit.css">
+    <!-- 
+
+TemplateMo 601 Chain Summit
+
+https://templatemo.com/tm-601-chain-summit
+
+-->
+
+</head>
+
+<body>
+    <!-- Background Animation -->
+    <div class="bg-animation">
+        <div class="neural-network" id="neuralNetwork"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#home" class="logo">
+                <!-- SVG: White logo for dark backgrounds -->
+                <svg width="40" height="40" viewBox="0 -13 120 120" xmlns="http://www.w3.org/2000/svg"
+                    aria-labelledby="logoTitle logoDesc" role="img">
+                    <title id="logoTitle">Code Circuit Logo</title>
+                    <desc id="logoDesc">Curly braces with circuit nodes and gradient stroke</desc>
+
+                    <defs>
+                        <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#00FFFF" />
+                            <stop offset="50%" stop-color="#FF00FF" />
+                            <stop offset="100%" stop-color="#7C3AED" />
+                        </linearGradient>
+                    </defs>
+
+                    <!-- Left curly brace -->
+                    <path d="M32 20
+                    C24 20, 24 36, 32 36
+                    C24 36, 24 52, 32 52
+                    C24 52, 24 68, 32 68" stroke="url(#g1)" stroke-width="6" stroke-linecap="round" fill="none" />
+
+                    <!-- Right curly brace -->
+                    <path d="M88 20
+                    C96 20, 96 36, 88 36
+                    C96 36, 96 52, 88 52
+                    C96 52, 96 68, 88 68" stroke="url(#g1)" stroke-width="6" stroke-linecap="round" fill="none" />
+
+                    <!-- Center rounded-circuit path (rounded square-like) -->
+                    <path d="M46 40
+                    h18
+                    a4 4 0 0 1 4 4
+                    v6
+                    h-8
+                    v10
+                    h-8
+                    v6
+                    a4 4 0 0 1 -4 4
+                    h-18" transform="translate(0,0)" stroke="url(#g1)" stroke-width="6" stroke-linecap="round"
+                        stroke-linejoin="round" fill="none" />
+
+                    <!-- Nodes (circles) -->
+                    <circle cx="60" cy="28" r="5" fill="url(#g1)" />
+                    <circle cx="80" cy="54" r="5" fill="url(#g1)" />
+                    <circle cx="60" cy="84" r="5" fill="url(#g1)" />
+                    <circle cx="40" cy="54" r="5" fill="url(#g1)" />
+
+                    <!-- Short connector strokes to nodes for crisp look -->
+                    <line x1="60" y1="34" x2="60" y2="40" stroke="url(#g1)" stroke-width="4" stroke-linecap="round" />
+                    <line x1="74" y1="54" x2="68" y2="54" stroke="url(#g1)" stroke-width="4" stroke-linecap="round" />
+                    <line x1="60" y1="74" x2="60" y2="70" stroke="url(#g1)" stroke-width="4" stroke-linecap="round" />
+                    <line x1="46" y1="54" x2="52" y2="54" stroke="url(#g1)" stroke-width="4" stroke-linecap="round" />
+
+                </svg>
+                <span class="logo-text">Indhu Mathi</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experiences">Experiences</a></li>
+                <li><a href="#register">Register</a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-nav" id="mobileNav">
+            <a href="#about" onclick="closeMenu()">About</a>
+            <a href="#process" onclick="closeMenu()">Process</a>
+            <a href="#projects" onclick="closeMenu()">Projects</a>
+            <a href="#experiences" onclick="closeMenu()">Experiences</a>
+            <a href="#register" onclick="closeMenu()">Register</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Indhu Mathi</h1>
+            <p>I had a real-world project experience and a passion for continuous learning, I build digital solutions
+                that
+                are both functional and beautifully designed.</p>
+
+            <!-- <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-target="500">0</span>
+                    <span class="stat-label">Attendees</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="50">0</span>
+                    <span class="stat-label">Speakers</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="3">0</span>
+                    <span class="stat-label">Days</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="25">0</span>
+                    <span class="stat-label">Sponsors</span>
+                </div>
+            </div> -->
+
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">01</span>
+                    <span class="countdown-label">Experience</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">v2.0</span>
+                    <span class="countdown-label">Skill Stack</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">100%</span>
+                    <span class="countdown-label">Creative Thinking</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">ON</span>
+                    <span class="countdown-label">Debugging Mode</span>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="images/Indhumathi_resume.pdf" download class="btn btn-secondary">Download CV</a>
+                <a href="#projects" class="btn btn-primary">Work Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2 class="animate-on-scroll">About Indhu Mathi</h2>
+        <div class="about-content">
+            <div class="about-text animate-on-scroll slide-left">
+                <p>I am a BCA graduate with hands-on experience in frontend and backend development. I enjoy creating
+                    responsive,
+                    user-friendly web applications that solve real-world problems and provide seamless experiences for
+                    users.</p>
+
+                <p>As a Freelance Developer, I have delivered projects including swimming pool training, gym management,
+                    and babycare educational platforms, handling everything from UI design to backend integration. This
+                    experience has strengthened my skills in problem-solving, debugging, and project delivery within
+                    dynamic environments.</p>
+                <p>I am passionate about continuous learning and staying updated with the latest web development trends
+                </p>
+            </div>
+            <div class="about-visual animate-on-scroll slide-right">
+                <div class="blockchain-visual">
+                    <div class="block">HTML</div>
+                    <div class="block">CSS</div>
+                    <div class="block">JS</div>
+                    <div class="block">REACT.JS</div>
+                    <div class="block">PHP</div>
+                    <div class="block">JAVA</div>
+                    <div class="block">PYTHON</div>
+                    <div class="block">MySQL</div>
+                    <div class="block">FIGMA</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-stats animate-on-scroll scale-up">
+            <div class="about-stat">
+                <span class="about-stat-number">90%</span>
+                <span class="about-stat-label">Frontend Power</span>
+            </div>
+            <div class="about-stat">
+                <span class="about-stat-number">75%</span>
+                <span class="about-stat-label">Backend Basics</span>
+            </div>
+            <div class="about-stat">
+                <span class="about-stat-number">100%</span>
+                <span class="about-stat-label">Team Collaboration</span>
+            </div>
+            <div class="about-stat">
+                <span class="about-stat-number">24/7</span>
+                <span class="about-stat-label">Commitment</span>
+            </div>
+        </div>
+
+        <!-- Hexagonal decorations -->
+        <div class="hex-decoration" style="top: 10%; left: 5%;"></div>
+        <div class="hex-decoration" style="top: 70%; right: 10%; animation-delay: 2s;"></div>
+        <div class="hex-decoration" style="top: 40%; right: 5%; animation-delay: 4s;"></div>
+    </section>
+
+    <!-- Speakers Section -->
+    <section id="process" class="section">
+        <h2 class="animate-on-scroll">The Process</h2>
+        <div class="speakers-grid">
+            <div class="speaker-card animate-on-scroll scale-up stagger-animation" style="--stagger: 1;">
+                <div class="speaker-avatar">01</div>
+                <h3 class="speaker-name">Process 01</h3>
+                <div class="speaker-title">Understand & Plan</div>
+                <p class="speaker-bio">I start by understanding your goals, target audience, and project requirements.
+                    This helps me set a clear direction and ensures the website meets your needs effectively.</p>
+            </div>
+            <div class="speaker-card animate-on-scroll scale-up stagger-animation" style="--stagger: 2;">
+                <div class="speaker-avatar">02</div>
+                <h3 class="speaker-name">Process 02</h3>
+                <div class="speaker-title">Design & Build</div>
+                <p class="speaker-bio">I create clean, responsive web designs using HTML, CSS, JavaScript, and
+                    Bootstrap. Every element is crafted to be user-friendly, functional, and visually appealing. I also
+                    integrate backend features using PHP and MySQL for dynamic content and functionality.</p>
+            </div>
+            <div class="speaker-card animate-on-scroll scale-up stagger-animation" style="--stagger: 3;">
+                <div class="speaker-avatar">03</div>
+                <h3 class="speaker-name">Process 03</h3>
+                <div class="speaker-title">Deliver & Support</div>
+                <p class="speaker-bio">Once the website is ready, I launch it and make sure it’s easy to manage. I
+                    provide guidance for updates or minor changes, ensuring the site works smoothly and grows with your
+                    needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="projects" class="section">
+        <h2 class="animate-on-scroll">Projects</h2>
+
+        <div class="schedule-tabs">
+            <button class="tab-btn active" onclick="showSchedule('day1', event)">Web</button>
+            <button class="tab-btn" onclick="showSchedule('day2', event)">UI/UX</button>
+            <button class="tab-btn" onclick="showSchedule('day3', event)">APP</button>
+        </div>
+
+        <div id="day1" class="schedule-content active">
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Project 01</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Swimming Pool Management Website</div>
+                            <div class="timeline-speaker">HTML, CSS, JavaScript, PHP, MySQL</div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">Designed a fully responsive website for a swimming pool business
+                            showcasing services, schedules, and membership options. Integrated a booking system, service
+                            portfolio, and contact forms with backend management using PHP and MySQL.</div>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Project 02</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Fitness Center Website</div>
+                            <div class="timeline-speaker">HTML, CSS, JavaScript, PHP, MySQL</div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">Developed a dynamic website for a fitness center, featuring class
+                            schedules, trainer profiles, and membership packages. Implemented a backend admin panel to
+                            manage content, display portfolios, and collect user inquiries.</div>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Project 03</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Baby Care Services Website</div>
+                            <div class="timeline-speaker">HTML, CSS, JavaScript, PHP, MySQL</div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">Created a responsive website for baby care services, highlighting
+                            product offerings, expert advice, and service portfolio. Implemented forms for appointment
+                            bookings and integrated a CMS to manage service listings and updates.</div>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Project 04</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Multi-Product Company Website</div>
+                            <div class="timeline-speaker">HTML, CSS, JavaScript, PHP, MySQL</div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">Built a company website featuring multiple products and services with
+                            interactive portfolios. Developed backend functionalities for adding, editing, and deleting
+                            product/service content with a responsive frontend for user-friendly navigation.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="day2" class="schedule-content">
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Project 01</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Tattoo Shop Interface Design</div>
+                            <div class="timeline-speaker">Figma</div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">Designed an intuitive UI for a tattoo shop including booking
+                            interface, portfolio gallery, and service categories. Focused on user experience with clean
+                            navigation and interactive visual elements to attract potential customers.</div>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Project 02</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Business Certification Portal UI</div>
+                            <div class="timeline-speaker">Figma</div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">Created a UI design for a business portal managing certifications
+                            like visa, marriage, and official documentation. Designed dashboards and forms to make
+                            complex processes simple and visually appealing.</div>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Project 03</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Map Tracking Interface Design</div>
+                            <div class="timeline-speaker">Figma</div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">Designed a map-based tracking UI for urban planning and real estate
+                            management. The interface allows visualization of assets, real-time tracking, and data
+                            overlays for city management and urban planning projects.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="day3" class="schedule-content">
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Project 01</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">IB Tracker – Live Tracking App</div>
+                            <div class="timeline-speaker">React.js, Node.js, Google Maps API, REST APIs</div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">Developed a live tracking app allowing users to monitor movements in
+                            real-time. Features include distance history (daily, weekly, monthly), vehicle tracking, and
+                            interactive maps showing live locations.</div>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Project 02</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">City Management & Urban Planning Tracker</div>
+                            <div class="timeline-speaker">React.js, Map APIs, Real-Time Database</div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">Created an app for city management tracking, integrating live camera
+                            feeds and data visualization for urban planning. Monitored vehicle movements, city zones,
+                            and infrastructure usage for better decision-making.</div>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll" onclick="toggleTimelineItem(this)">
+                    <div class="timeline-header">
+                        <div class="timeline-time">Project 03</div>
+                        <div class="timeline-info">
+                            <div class="timeline-title">Taxi Fleet Management App</div>
+                            <div class="timeline-speaker">React.js, TypeScript, Google Maps API, MySQL</div>
+                        </div>
+                        <div class="timeline-collapse-icon">▼</div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="timeline-desc">Built a taxi management system displaying real-time availability
+                            (Free, Stealth, High-demand taxis). Features include driver details, vehicle number plates,
+                            location tracking, and interactive analytics for efficient fleet management.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section id="experiences" class="section">
+        <h2 class="animate-on-scroll">Experiences</h2>
+        <div class="sponsors-section animate-on-scroll">
+            <div class="sponsor-tiers">
+                <!-- Platinum Sponsors -->
+                <div class="sponsor-tier">
+                    <h3 class="tier-title platinum">Software Developer</h3>
+                    <div class="sponsors-grid platinum">
+                        <div class="sponsor-card platinum animate-on-scroll scale-up stagger-animation"
+                            style="--stagger: 1;">
+                            <div class="sponsor-logo">Dec 2024 - Present</div>
+                            <h4 class="sponsor-name">Geospeck Ingenious Technology</h4>
+                            <p class="sponsor-description">Worked on PHP and React.js projects, designed intuitive user
+                                interfaces using Figma, and developed features using TypeScript for web applications.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gold Sponsors -->
+                <div class="sponsor-tier">
+                    <h3 class="tier-title gold">Internship Experiences</h3>
+                    <div class="sponsors-grid gold">
+                        <div class="sponsor-card gold animate-on-scroll scale-up stagger-animation"
+                            style="--stagger: 2;">
+                            <div class="sponsor-logo">Aug 2025 - Sep 2025</div>
+                            <h4 class="sponsor-name">SERP Hawk Bengaluru</h4>
+                            <p class="sponsor-description">Developed a job portal web application, implementing backend
+                                and frontend features, and optimized user workflows.</p>
+                        </div>
+                        <div class="sponsor-card gold animate-on-scroll scale-up stagger-animation"
+                            style="--stagger: 3;">
+                            <div class="sponsor-logo">Mar 2024 - Oct 2024</div>
+                            <h4 class="sponsor-name">Vetri Technology Solutions</h4>
+                            <p class="sponsor-description">Handled responsive web development projects and UI/UX design
+                                tasks, creating interactive websites and improving user experience.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Silver Sponsors -->
+                <div class="sponsor-tier">
+                    <h3 class="tier-title silver">Education & Certification</h3>
+                    <div class="sponsors-grid silver">
+                        <div class="sponsor-card silver animate-on-scroll scale-up stagger-animation"
+                            style="--stagger: 4;">
+                            <div class="sponsor-logo">2020 – 2023</div>
+                            <h4 class="sponsor-name">BCA</h4>
+                            <p class="sponsor-description">Graduated with 77%, specializing in software development,
+                                database systems, and programming. Gained practical experience through projects,
+                                seminars, and IT forums.</p>
+                        </div>
+                        <!-- <div class="sponsor-card silver animate-on-scroll scale-up stagger-animation"
+                            style="--stagger: 5;">
+                            <div class="sponsor-logo">AI</div>
+                            <h4 class="sponsor-name">AI Ventures</h4>
+                            <p class="sponsor-description">Investment and startup incubation</p>
+                        </div>
+                        <div class="sponsor-card silver animate-on-scroll scale-up stagger-animation"
+                            style="--stagger: 6;">
+                            <div class="sponsor-logo">BC</div>
+                            <h4 class="sponsor-name">BlockChain Pro</h4>
+                            <p class="sponsor-description">Blockchain consulting and development</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Register Section -->
+    <section id="register" class="section">
+
+        <!-- SUCCESS POPUP -->
+    <div id="successPopup" class="popup-overlay">
+        <div class="popup-box">
+            <h2>Message Sent Successfully!</h2>
+            <p>We will contact you shortly.</p>
+        </div>
+    </div>
+        <!-- Contact Information -->
+        <div class="contact-info-section animate-on-scroll">
+            <div class="contact-container">
+                <!-- Contact Form Column -->
+                <div class="contact-form-column">
+                    <h3 class="contact-form-title">Send Us a Message</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-field">
+                            <label for="contactName">Name</label>
+                            <input type="text" id="contactName" name="name" required placeholder="Your name">
+                        </div>
+                        <div class="form-field">
+                            <label for="contactEmail">Email</label>
+                            <input type="email" id="contactEmail" name="email" required placeholder="your@email.com">
+                        </div>
+                        <div class="form-field">
+                            <label for="contactSubject">Subject</label>
+                            <input type="text" id="contactSubject" name="subject" required
+                                placeholder="How can we help?">
+                        </div>
+                        <div class="form-field">
+                            <label for="contactMessage">Message</label>
+                            <textarea id="contactMessage" name="message" required
+                                placeholder="Your message..."></textarea>
+                        </div>
+                        <button type="submit" class="contact-submit-btn">Send Message</button>
+                        <div id="contactFormMessage" class="form-message"></div>
+                    </form>
+                </div>
+
+
+                <!-- Contact Info Column -->
+                <div class="contact-info-column">
+                    <h3 class="contact-info-title">Get In Touch</h3>
+                    <div class="contact-info-grid">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Tenkasi , Tamil Nadu <br>India.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value"><a
+                                        href="mailto:info@chainsummit.com">indhu0704@gmail.com</a></span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Phone</span>
+                                <span class="contact-value">+91 6369618203</span>
+                            </div>
+                        </div>
+                        <!-- <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z" />
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Event Date</span>
+                                <span class="contact-value">December 15-17, 2025<br>9:00 AM - 6:00 PM Daily</span>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h2>Indhu Mathi</h2>
+            <p> 2025 • Tenkasi, Tamil Nadu, India</p>
+            <!-- set the event date in the JavaScript file / line number 32 -->
+            <div class="social-links">
+                <a href="https://github.com/Indhu74-mathi" class="social-link" rel="nofollow noopener"
+                    target="_blank">G</a>
+                <a href="https://www.behance.net/indhumathi13" class="social-link" target="_blank">B</a>
+                <a href="https://www.linkedin.com/in/indhu-mathi-10a48b382/" class="social-link" target="_blank">L</a>
+                <a href="#" class="social-link">I</a>
+            </div>
+
+            <p>
+                © 2025 Indhu Mathi. All rights reserved.
+                | Designed by Indhu Mathi P</a>
+            </p>
+        </div>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+    (function () {
+        emailjs.init("bzIyssqW19l8UAYkJ"); 
+    })();
+
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        emailjs.send("service_8sf9xwg", "template_erxo2au", {
+            name: document.getElementById("contactName").value,
+            email: document.getElementById("contactEmail").value,
+            subject: document.getElementById("contactSubject").value,
+            message: document.getElementById("contactMessage").value
+        })
+        .then(function () {
+
+            Swal.fire({
+                title: "Success!",
+                text: "Your message has been sent successfully.",
+                icon: "success",
+                confirmButtonText: "OK",
+                confirmButtonColor: "#28a745",
+                width: "400px",
+                allowOutsideClick: false,
+                backdrop: `rgba(0,0,0,0.4)`
+            }).then(() => {
+                location.reload(); // popup close → reload
+            });
+
+            document.getElementById("contactForm").reset();
+        })
+        .catch(function () {
+            Swal.fire({
+                title: "Error!",
+                text: "Something went wrong. Please try again.",
+                icon: "error",
+                confirmButtonText: "Close"
+            });
+        });
+    });
+</script>
+
+    <script src="templatemo-chain-scripts.js"></script>
+</body>
+
+</html>
